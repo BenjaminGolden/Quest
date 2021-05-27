@@ -31,6 +31,7 @@ namespace Quest
             string answer = Console.ReadLine();
 
             int numAnswer;
+            //tryparse takes in a string (answer) and try to parse the answer into an int to numAnswer. if it can't parse then isNumber will return false.
             bool isNumber = int.TryParse(answer, out numAnswer);
 
             Console.WriteLine();
