@@ -4,16 +4,22 @@ using System.Collections.Generic;
 // Every class in the program is defined within the "Quest" namespace
 // Classes within the same namespace refer to one another without a "using" statement
 
-
 namespace Quest
 {
     class Program
     {
+       
+
         static void Main(string[] args)
         {
             
-            Console.Write("Hi! What's your name? ");
-            string name = Console.ReadLine();
+            
+            Robe adventurerRobe = new Robe();
+            {
+            adventurerRobe.Length = 12;
+            adventurerRobe.Colors = new List<string> {"blue", "Red", "black"};
+            }
+
             
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
@@ -48,8 +54,14 @@ namespace Quest
             int minAwesomeness = 0;
             int maxAwesomeness = 100;
 
+            
+            Console.Write("Hi! What's your name? ");
+            string name = Console.ReadLine();
+
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer(name);
+            Adventurer theAdventurer = new Adventurer(name, adventurerRobe);
+
+            Console.WriteLine(theAdventurer.GetDescription());
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.

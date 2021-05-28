@@ -50,7 +50,7 @@ namespace Quest
 
             // Note how we call an Adventurer object's method
             Console.WriteLine(adventurer.GetAdventurerStatus());
-            Console.WriteLine();
+            Console.WriteLine(adventurer.GetDescription());
         }
     }
 }
