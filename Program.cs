@@ -8,11 +8,11 @@ namespace Quest
 {
     class Program
     {
-        // private static object adventurer;
+       
 
         static void Main(string[] args)
         {
-            // Console.WriteLine(adventurer.GetDescription());
+            
             
             Robe adventurerRobe = new Robe();
             {
@@ -20,8 +20,6 @@ namespace Quest
             adventurerRobe.Colors = new List<string> {"blue", "Red", "black"};
             }
 
-            Console.Write("Hi! What's your name? ");
-            string name = Console.ReadLine();
             
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
@@ -56,8 +54,14 @@ namespace Quest
             int minAwesomeness = 0;
             int maxAwesomeness = 100;
 
+            
+            Console.Write("Hi! What's your name? ");
+            string name = Console.ReadLine();
+
             // Make a new "Adventurer" object using the "Adventurer" class
             Adventurer theAdventurer = new Adventurer(name, adventurerRobe);
+
+            Console.WriteLine(theAdventurer.GetDescription());
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
