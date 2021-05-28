@@ -79,6 +79,9 @@ namespace Quest
                 favoriteBeatle
             };
 
+            //new instance of a prize
+            Prize myPrize = new Prize("You Rock!");
+
             // Loop through all the challenges and subject the Adventurer to them
             bool tryAgain = true;
             while (tryAgain)
@@ -86,6 +89,7 @@ namespace Quest
                 foreach (Challenge challenge in challenges)
                 {
                     challenge.RunChallenge(theAdventurer);
+                    
                 }
 
                 // This code examines how Awesome the Adventurer is after completing the challenges
@@ -102,6 +106,8 @@ namespace Quest
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
+
+                myPrize.ShowPrize(theAdventurer);
 
                 Console.WriteLine("would you like to try again? y/n ");
                 string answer = Console.ReadLine();
