@@ -4,16 +4,21 @@ using System.Collections.Generic;
 // Every class in the program is defined within the "Quest" namespace
 // Classes within the same namespace refer to one another without a "using" statement
 
-
 namespace Quest
 {
     class Program
     {
+        // private static object adventurer;
+
         static void Main(string[] args)
         {
+            // Console.WriteLine(adventurer.GetDescription());
+            
             Robe adventurerRobe = new Robe();
+            {
             adventurerRobe.Length = 12;
-            adventurerRobe.Colors.Add("blue");
+            adventurerRobe.Colors = new List<string> {"blue", "Red", "black"};
+            }
 
             Console.Write("Hi! What's your name? ");
             string name = Console.ReadLine();
