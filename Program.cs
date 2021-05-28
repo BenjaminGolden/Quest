@@ -20,6 +20,11 @@ namespace Quest
             adventurerRobe.Colors = new List<string> {"blue", "Red", "black"};
             }
 
+            Hat adventurerHat = new Hat();
+            {
+                adventurerHat.ShininessLevel = 7;
+
+            }
             
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
@@ -59,7 +64,7 @@ namespace Quest
             string name = Console.ReadLine();
 
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer(name, adventurerRobe);
+            Adventurer theAdventurer = new Adventurer(name, adventurerRobe, adventurerHat);
 
             Console.WriteLine(theAdventurer.GetDescription());
 
@@ -74,6 +79,9 @@ namespace Quest
                 favoriteBeatle
             };
 
+            //new instance of a prize
+            Prize myPrize = new Prize("You Rock!");
+
             // Loop through all the challenges and subject the Adventurer to them
             bool tryAgain = true;
             while (tryAgain)
@@ -81,6 +89,7 @@ namespace Quest
                 foreach (Challenge challenge in challenges)
                 {
                     challenge.RunChallenge(theAdventurer);
+                    
                 }
 
                 // This code examines how Awesome the Adventurer is after completing the challenges
@@ -97,6 +106,8 @@ namespace Quest
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
+
+                myPrize.ShowPrize(theAdventurer);
 
                 Console.WriteLine("would you like to try again? y/n ");
                 string answer = Console.ReadLine();
