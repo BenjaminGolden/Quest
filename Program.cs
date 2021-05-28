@@ -20,6 +20,11 @@ namespace Quest
             adventurerRobe.Colors = new List<string> {"blue", "Red", "black"};
             }
 
+            Hat adventurerHat = new Hat();
+            {
+                adventurerHat.ShininessLevel = 7;
+
+            }
             
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
@@ -59,7 +64,7 @@ namespace Quest
             string name = Console.ReadLine();
 
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer(name, adventurerRobe);
+            Adventurer theAdventurer = new Adventurer(name, adventurerRobe, adventurerHat);
 
             Console.WriteLine(theAdventurer.GetDescription());
 
